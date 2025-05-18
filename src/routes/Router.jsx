@@ -8,6 +8,7 @@ import AddProducts from "../components/AddProducts/AddProducts";
 import PrivateRoute from "./PrivateRoute";
 import Mylist from "../components/MyList/Mylist";
 import Equipment from "../components/Equipments/Equipments";
+import EditProduct from "../components/AddProducts/EditProduct";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/addproducts',
         element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
+      },
+      {
+        path: '/editproduct',
+        element: <EditProduct></EditProduct>
       },
       {
         path: '/mylist',

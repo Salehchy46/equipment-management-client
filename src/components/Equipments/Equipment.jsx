@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import { Link, NavLink } from 'react-router-dom';
 
 const Equipment = ({ equipment, equipments, setEquipments }) => {
 
@@ -50,7 +51,7 @@ const Equipment = ({ equipment, equipments, setEquipments }) => {
                     <p>{description}</p>
                     <p>{price}</p>
                     <div className="card-actions">
-                        <button className='btn btn-dash'>Edit</button>
+                        <NavLink to='/editproduct'><button className='btn btn-dash'>Edit</button></NavLink>
                         <button className="btn btn-primary">Details</button>
                         <button onClick={() => handleDeleteEquipment(_id)} className="btn btn-error">X</button>
                     </div>
