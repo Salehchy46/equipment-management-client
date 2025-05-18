@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProducts = () => {
 
     const handleAddProduct = e => {
@@ -30,7 +32,7 @@ const AddProducts = () => {
                 console.log(data);
                 if (data) {
                     Swal.fire({
-                        title: "Drag me!",
+                        title: "Product added successfully!",
                         icon: "success",
                         draggable: true
                     });
