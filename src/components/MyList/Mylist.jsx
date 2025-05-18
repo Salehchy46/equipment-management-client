@@ -63,7 +63,6 @@ const Mylist = () => {
                                     <td>{user.createdAt}</td>
                                     <td>{user.lastSignInTime}</td>
                                     <td>
-                                        <button className='btn btn-sm mr-2'>Edit</button>
                                         <button onClick={() => handleUserDelete(user._id)} className='btn btn-sm btn-error'>X</button>
                                     </td>
                                 </tr>

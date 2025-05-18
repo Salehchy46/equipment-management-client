@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="py-10">
+        <footer className="m-4 py-10 shadow-sm">
             <div className="lg:justify-items-center mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center sm:text-left">
                 <nav className="justify-items-center">
                     <h6 className="footer-title text-lg font-semibold mb-3">Services</h6>

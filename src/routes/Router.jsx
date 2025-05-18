@@ -7,6 +7,7 @@ import SignIn from "../components/SignIn/SignIn";
 import AddProducts from "../components/AddProducts/AddProducts";
 import PrivateRoute from "./PrivateRoute";
 import Mylist from "../components/MyList/Mylist";
+import Equipment from "../components/Equipments/Equipments";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+      },
+      {
+        path: '/shop',
+        element: <Equipment></Equipment>,
+        loader: () => fetch('http://localhost:5000/equipments')
       },
       {
         path: '/addproducts',
