@@ -1,3 +1,6 @@
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
+
 const Footer = () => {
     return (
         <footer className="m-4 py-10 shadow-sm">
@@ -21,6 +24,10 @@ const Footer = () => {
 
 
                 <aside className="justify-items-center text-center">
+                    <Tooltip id='my-tooltip'></Tooltip>
+                    <a data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!">
+                        ◕‿‿◕
+                    </a>
                     <img src="https://i.ibb.co/kg71kTzS/download.webp" alt="LOGO" className="w-14 rounded-full" />
                     <p className="font-bold text-xl">
                         Equipment Management

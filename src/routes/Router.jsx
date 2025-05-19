@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import Mylist from "../components/MyList/Mylist";
 import Equipment from "../components/Equipments/Equipments";
 import EditProduct from "../components/AddProducts/EditProduct";
+import SingleEquipment from "../components/Equipments/SingleEquipment";
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-      },
+        loader: (params) => fetch(`http://localhost:5000/users/${params.params.email}`)
+      }, 
       {
         path: '/shop',
         element: <Equipment></Equipment>,
@@ -31,13 +33,19 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
-        path: '/editproduct',
-        element: <EditProduct></EditProduct>
+        path: '/editproduct/:id',
+        element: <EditProduct></EditProduct>,
+        loader: (params) => fetch(`http://localhost:5000/equipments/${params.params.id}`),
       },
       {
         path: '/mylist',
         element: <PrivateRoute><Mylist></Mylist></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/singleequipment/:id',
+        element: <PrivateRoute><SingleEquipment></SingleEquipment></PrivateRoute>,
+        loader: (params) => fetch(`http://localhost:5000/equipments/${params.params.id}`)
       },
       {
         path:'/signup',

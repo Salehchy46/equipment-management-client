@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Equipment = ({ equipment, equipments, setEquipments }) => {
 
@@ -23,7 +23,7 @@ const Equipment = ({ equipment, equipments, setEquipments }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        if (data.deleteCount > 0) {
+                        if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
@@ -49,10 +49,10 @@ const Equipment = ({ equipment, equipments, setEquipments }) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
-                    <p>{price}</p>
+                    <p>{price} Tk.</p>
                     <div className="card-actions">
-                        <NavLink to='/editproduct'><button className='btn btn-dash'>Edit</button></NavLink>
-                        <button className="btn btn-primary">Details</button>
+                        <Link to={`/editproduct/${_id}`}><button className='btn btn-dash'>Edit</button></Link>
+                        <Link to={`/singleequipment/${_id}`}><button className="btn btn-primary">Details</button></Link>
                         <button onClick={() => handleDeleteEquipment(_id)} className="btn btn-error">X</button>
                     </div>
                 </div>

@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const EditProduct = () => {
 
-    const equipment = useEffect(
-        fetch('http://localhost:5000/equipments/:id')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
-    )
+    const equipment = useLoaderData()
 
     const { _id, name, image, category, description, price, rating, customization, delivery, stock } = equipment;
 
@@ -31,7 +25,7 @@ const EditProduct = () => {
 
         console.log(updateProduct);
 
-        fetch('http://localhost:5000/equipments', {
+        fetch(`http://localhost:5000/equipments/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -78,7 +72,7 @@ const EditProduct = () => {
                         <label className="label my-2">Stock Status</label><br />
                         <input type="number" className="input" defaultValue={stock} name="stock" placeholder="Stock Status" /><br />
 
-                        <input type="submit" className="btn btn-lg mt-8 px-20" value="Add Product" />
+                        <input type="submit" className="btn btn-lg mt-8 px-20" value="Edit Product" />
                     </div>
                 </div>
             </form>

@@ -1,5 +1,8 @@
 import Category from "./Category";
 import Slider from "./Slider";
+// import Lottie from "lottie-react";
+// import groovyWalkAnimation from "./groovyWalk.json";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Home = () => {
 
@@ -15,10 +18,14 @@ const Home = () => {
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Elevate Your Game</h1>
-                        <p className="mb-5 text-xl font-semibold">
-                            Gear Up, Play Hard, Win Big.
-                        </p>
+                        <Slide>
+                            <h1 className="mb-5 text-5xl font-bold">Elevate Your Game</h1>
+                        </Slide>
+                        <Fade cascade damping={0.1}>
+                            <p className="mb-5 text-xl font-semibold">
+                                Gear Up, Play Hard, Win Big.
+                            </p>
+                        </Fade>
                     </div>
                 </div>
             </div>

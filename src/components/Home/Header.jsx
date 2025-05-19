@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
 
 const Header = () => {
+
+    const userName = useLoaderData();
 
     const { user, logOut } = useContext(AuthContext)
 
@@ -94,8 +96,8 @@ const Header = () => {
                 <div className="navbar-end mr-6">
                     {user ? (
                         <div className="flex items-center gap-2">
-                            <span>{user.name || "Anonymous"}</span>
-                            <img src={user.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxEkhyTAMbKemqMiMJqqUQ2DkMss6isC4ng&s"} className="w-10 rounded-full" alt="User Avatar" />
+                            <span>{userName?.name || "Anonymous"}</span>
+                            <img src={userName?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxEkhyTAMbKemqMiMJqqUQ2DkMss6isC4ng&s"} className="w-10 rounded-full" alt="User Avatar" />
                         </div>
                     ) : (
                         <span>Login first</span>
