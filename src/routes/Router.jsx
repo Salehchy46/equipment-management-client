@@ -10,6 +10,7 @@ import Mylist from "../components/MyList/Mylist";
 import Equipment from "../components/Equipments/Equipments";
 import EditProduct from "../components/AddProducts/EditProduct";
 import SingleEquipment from "../components/Equipments/SingleEquipment";
+import Header from "../components/Home/Header";
 
 
 const router = createBrowserRouter([
@@ -21,8 +22,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: (params) => fetch(`http://localhost:5000/users/${params.params.email}`)
-      }, 
+        loader: (params) => fetch(`http://localhost:5000/users/${params.params.id}`)
+      },
+      {
+        path: '/',
+        element: <Header></Header>,
+        loader: (params) => fetch(`http://localhost:5000/users/${params.params.id}`)
+      },
       {
         path: '/shop',
         element: <Equipment></Equipment>,

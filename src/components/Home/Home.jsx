@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Category from "./Category";
 import Slider from "./Slider";
 // import Lottie from "lottie-react";
@@ -5,6 +6,10 @@ import Slider from "./Slider";
 import { Fade, Slide } from "react-awesome-reveal";
 
 const Home = () => {
+
+    const user = useLoaderData();
+    console.log(user);
+    
 
     return (
         <div className="m-4">
@@ -18,6 +23,7 @@ const Home = () => {
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
+                        <p>Hi {user.name}</p>
                         <Slide>
                             <h1 className="mb-5 text-5xl font-bold">Elevate Your Game</h1>
                         </Slide>

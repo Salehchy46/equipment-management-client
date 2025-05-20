@@ -2,7 +2,10 @@ import { useLoaderData } from 'react-router-dom';
 
 const EditProduct = () => {
 
-    const equipment = useLoaderData()
+    const equipment = useLoaderData();
+
+    console.log(equipment);
+    
 
     const { _id, name, image, category, description, price, rating, customization, delivery, stock } = equipment;
 

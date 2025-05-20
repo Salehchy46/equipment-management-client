@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 const Header = () => {
 
     const userName = useLoaderData();
+    console.log(userName);
+    
 
     const { user, logOut } = useContext(AuthContext)
 
