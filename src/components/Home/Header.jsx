@@ -101,7 +101,7 @@ const Header = () => {
 
                     {user ? (
                         <div className="flex items-center gap-2">
-                            <span>{userName?.name || "Anonymous"}</span>
+                            <span>{userName?.name}</span>
                             <img src={userName?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxEkhyTAMbKemqMiMJqqUQ2DkMss6isC4ng&s"} className="w-10 rounded-full" alt="User Avatar" />
                         </div>
                     ) : (
