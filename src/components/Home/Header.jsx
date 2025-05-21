@@ -2,12 +2,13 @@ import { useContext, useEffect } from "react";
 import { NavLink, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import Toggle from "../Toggle";
 
 const Header = () => {
 
     const userName = useLoaderData();
     console.log(userName);
-    
+
 
     const { user, logOut } = useContext(AuthContext)
 
@@ -96,6 +97,8 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-end mr-6">
+                    <Toggle></Toggle>
+
                     {user ? (
                         <div className="flex items-center gap-2">
                             <span>{userName?.name || "Anonymous"}</span>

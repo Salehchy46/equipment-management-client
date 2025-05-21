@@ -7,9 +7,8 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const Home = () => {
 
-    const user = useLoaderData();
-    console.log(user);
-    
+    // const user = useLoaderData();
+    // console.log(user);
 
     return (
         <div className="m-4">
@@ -23,7 +22,10 @@ const Home = () => {
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
-                        <p>Hi {user.name}</p>
+                        {/* <div className="flex items-center">
+                            <img src={user.image} alt="" className="w-10 h-10 rounded-full" />
+                            <p>Hi {user.name}</p>
+                        </div> */}
                         <Slide>
                             <h1 className="mb-5 text-5xl font-bold">Elevate Your Game</h1>
                         </Slide>
