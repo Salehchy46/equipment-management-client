@@ -25,9 +25,7 @@ const SingleEquipment = () => {
                     />
                     <div>
                         <h1 className="text-2xl font-bold">Name: {singleEqip.name}</h1>
-                        <p className="py-1">
-                            Description: {singleEqip.description}
-                        </p>
+                        <p className="py-1">Description: {singleEqip.description}</p>
                         <p className='py-1'>Category: {singleEqip.category}</p>
                         <p className='py-1'>Price: {singleEqip.price}</p>
                         <p className='py-1'>rating: {singleEqip.rating}</p>

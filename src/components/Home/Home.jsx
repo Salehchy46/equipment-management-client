@@ -4,19 +4,30 @@ import Slider from "./Slider";
 // import Lottie from "lottie-react";
 // import groovyWalkAnimation from "./groovyWalk.json";
 import { Fade, Slide } from "react-awesome-reveal";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProviders";
 
 const Home = () => {
 
-    const user = useLoaderData();
-    // console.log(user);
+    const { user } = useContext(AuthContext);
+
+    const loadedUser = useLoaderData();
+    // console.log(loadedUser);
 
     return (
         <div className="m-4">
-            <div className="text-center flex justify-between flex-row-reverse items-center mb-5 p-4 shadow-2xl">
-                <img src={user.image} className="rounded-full w-10 h-10" alt="User" />
-                <p className="my-2 font-medium">{user.email}</p>
-                <p className="my-2">Hi {user.name}</p>
-            </div>
+            {
+                user ?
+                    <div className="text-center flex justify-between flex-row-reverse items-center mb-5 p-4 shadow-sm">
+                        <img src={loadedUser.image} className="rounded-full w-10 h-10" alt="User" />
+                        <p className="my-2 font-medium">{loadedUser.email}</p>
+                        <p className="my-2">Hi {loadedUser.name}</p>
+                    </div>
+                    :
+                    <div>
+                        
+                    </div>
+            }
             <div
                 className="hero min-h-screen"
                 style={{
