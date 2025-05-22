@@ -12,6 +12,11 @@ const Home = () => {
 
     return (
         <div className="m-4">
+            <div className="text-center flex justify-between flex-row-reverse items-center mb-5 p-4 shadow-2xl">
+                <img src={user.image} className="rounded-full w-10 h-10" alt="User" />
+                <p className="my-2 font-medium">{user.email}</p>
+                <p className="my-2">Hi {user.name}</p>
+            </div>
             <div
                 className="hero min-h-screen"
                 style={{
@@ -22,9 +27,7 @@ const Home = () => {
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
-                        <div className="text-center font-black">
-                            <p className="my-2">Hi {user.name}</p>
-                        </div>
+
                         <Slide>
                             <h1 className="mb-5 text-5xl font-bold">Elevate Your Game</h1>
                         </Slide>
