@@ -22,12 +22,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: (params) => fetch(`equipment-management-server.vercel.app/users/${params.params.id}`)
+        loader: (params) => fetch(`https://equipment-management-server.vercel.app/users/${params.params.id}`)
       },
       {
         path: '/shop',
         element: <Equipment></Equipment>,
-        loader: () => fetch('equipment-management-server.vercel.app/equipments')
+        loader: () => fetch('https://equipment-management-server.vercel.app/equipments')
       },
       {
         path: '/addproducts',
@@ -36,17 +36,17 @@ const router = createBrowserRouter([
       {
         path: '/editproduct/:id',
         element: <EditProduct></EditProduct>,
-        loader: (params) => fetch(`equipment-management-server.vercel.app/equipments/${params.params.id}`),
+        loader: (params) => fetch(`https://equipment-management-server.vercel.app/equipments/${params.params.id}`),
       },
       {
         path: '/mylist',
         element: <PrivateRoute><Mylist></Mylist></PrivateRoute>,
-        loader: () => fetch('equipment-management-server.vercel.app/users')
+        loader: () => fetch('https://equipment-management-server.vercel.app/users')
       },
       {
         path: '/singleequipment/:id',
         element: <PrivateRoute><SingleEquipment></SingleEquipment></PrivateRoute>,
-        loader: (params) => fetch(`equipment-management-server.vercel.app/equipments/${params.params.id}`)
+        loader: (params) => fetch(`https://equipment-management-server.vercel.app/equipments/${params.params.id}`)
       },
       {
         path:'/signup',

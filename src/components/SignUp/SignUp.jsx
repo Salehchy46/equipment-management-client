@@ -21,7 +21,7 @@ const SignUp = () => {
         const image = form.imgurl.value;
 
         // const user = { email, password };
-        // console.log(user);
+        // ;
         setSuccess('');
         setRegError('');
 

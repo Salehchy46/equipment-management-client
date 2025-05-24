@@ -30,7 +30,7 @@ const Home = () => {
 
                     </div>
             }
-            <Lottie className="justify-items-center max-w-full"></Lottie>
+            {/* <Lottie className="justify-items-center max-w-full"></Lottie> */}
             <div
                 className="hero min-h-screen"
                 style={{
