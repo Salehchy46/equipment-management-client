@@ -45,7 +45,7 @@ const SignUp = () => {
                 const createdAt = result?.user?.metadata?.creationTime;
                 const newUser = { name, email, createdAt, image };
 
-                fetch('http://localhost:5000/users', {
+                fetch('equipment-management-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -28,7 +28,7 @@ const EditProduct = () => {
 
         console.log(updateProduct);
 
-        fetch(`http://localhost:5000/equipments/${_id}`, {
+        fetch(`equipment-management-server.vercel.app/equipments/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -1,0 +1,114 @@
+{
+  "fields": {
+    "AcornAgileProcess.BugSource": "Ad Hoc",
+    "AcornAgileProcess.IssueType": "Content",
+    "Custom.BuildVariant": "Default",
+    "Custom.ReproinRetail": "No",
+    "Custom.SQInvestigationStatus": "Not started",
+    "PhoenixAgileProcess.GameArea": "Art - technical/FX",
+    "PhoenixAgileProcess.GameMode": "In-Game (all)",
+    "PhoenixAgileProcess.ReproCount": 4,
+    "PhoenixAgileProcess.ReproRate": "5 - Consistently (100%)",
+    "PhoenixAgileProcess.ReproTime": 5,
+    "PhoenixAgileProcess.SkuTested": "sometext",
+    "System.AreaId": 1098,
+    "System.AreaLevel1": "sometext",
+    "System.AreaPath": "sometext",
+    "System.AssignedTo": {
+      "_links": {
+        "avatar": {
+          "href": "someurl"
+        }
+      },
+      "descriptor": "aad.NmE1MWI2NjMtOWU2Ny03NWYyLTlkOGEtNjMwMDFhMzVlZDI3",
+      "displayName": "Triage",
+      "id": "sometext",
+      "imageUrl": "someurl",
+      "uniqueName": "sometext",
+      "url": "someurl"
+    },
+    "System.AuthorizedAs": {
+      "_links": {
+        "avatar": {
+          "href": "someurl"
+        }
+      },
+      "descriptor": "aad.YmJkMGZjNmItMTBjYi03ODYxLTk0NTAtNGZjNGYwYjkzMmM3",
+      "displayName": "sometext",
+      "id": "someid",
+      "imageUrl": "someurl",
+      "uniqueName": "sometext",
+      "url": "someurl"
+    },
+    "System.AuthorizedDate": "2021-03-31T23:18:58.513Z",
+    "System.ChangedBy": {
+      "_links": {
+        "avatar": {
+          "href": "someurl"
+        }
+      },
+      "descriptor": "aad.YmJkMGZjNmItMTBjYi03ODYxLTk0NTAtNGZjNGYwYjkzMmM3",
+      "displayName": "sometext",
+      "id": "someid",
+      "imageUrl": "someurl",
+      "uniqueName": "sometext",
+      "url": "someurl"
+    },
+    "System.ChangedDate": "2021-03-31T23:18:58.513Z",
+    "System.CommentCount": 0,
+    "System.CreatedBy": {
+      "_links": {
+        "avatar": {
+          "href": "someurl"
+        }
+      },
+      "descriptor": "aad.NTcyMTBjZmQtY2VlOC03NjFhLTk4YzctYTc2YjA4NDUyZDU5",
+      "displayName": "sometext",
+      "id": "someid",
+      "imageUrl": "someurl",
+      "uniqueName": "sometext",
+      "url": "someurl"
+    },
+    "System.CreatedDate": "2021-03-31T23:16:45.42Z",
+    "System.Id": 896092,
+    "System.IterationId": 1093,
+    "System.IterationLevel1": "sometext",
+    "System.IterationPath": "sometext",
+    "System.NodeName": "sometext",
+    "System.PersonId": 31919392,
+    "System.Reason": "New",
+    "System.Rev": 2,
+    "System.RevisedDate": "9999-01-01T00:00:00Z",
+    "System.State": "New",
+    "System.TeamProject": "sometext",
+    "System.Title": "sometext",
+    "System.Watermark": 1589040,
+    "System.WorkItemType": "Bug"
+  },
+  "id": 896092,
+  "relations": [
+    {
+      "attributes": {
+        "isLocked": false,
+        "name": "Related"
+      },
+      "rel": "System.LinkTypes.Related",
+      "url": "someurl"
+    },
+    {
+      "attributes": {
+        "authorizedDate": "2021-03-31T23:16:45.42Z",
+        "id": 12326470,
+        "name": "ParticleEffects.mp4",
+        "resourceCreatedDate": "2021-03-31T23:09:55.437Z",
+        "resourceModifiedDate": "2021-03-31T20:03:35.273Z",
+        "resourceSize": 23883076,
+        "revisedDate": "9999-01-01T00:00:00Z"
+      },
+      "rel": "AttachedFile",
+      "url": "someurl"
+    }
+  ],
+  "rev": 2,
+  "url": "someurl"
+}

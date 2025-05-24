@@ -6,6 +6,8 @@ import Slider from "./Slider";
 import { Fade, Slide } from "react-awesome-reveal";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
+import App from "../Lottie/Lottie";
+import Lottie from "../Lottie/Lottie";
 
 const Home = () => {
 
@@ -25,9 +27,10 @@ const Home = () => {
                     </div>
                     :
                     <div>
-                        
+
                     </div>
             }
+            <Lottie className="justify-items-center max-w-full"></Lottie>
             <div
                 className="hero min-h-screen"
                 style={{
@@ -35,6 +38,7 @@ const Home = () => {
                         "url(https://porta-stor.com/wp-content/uploads/2018/11/Seasonal-Sports-Equipment-Storage-1024x668.jpg)",
                 }}
             >
+                
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
