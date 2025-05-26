@@ -6,10 +6,6 @@ import Toggle from "../Toggle";
 
 const Header = () => {
 
-    const userName = useLoaderData();
-    console.log(userName);
-
-
     const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {

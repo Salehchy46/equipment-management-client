@@ -11,6 +11,7 @@ import Equipment from "../components/Equipments/Equipments";
 import EditProduct from "../components/AddProducts/EditProduct";
 import SingleEquipment from "../components/Equipments/SingleEquipment";
 import Header from "../components/Home/Header";
+import Users from "../components/MyList/Users";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path: '/mylist',
         element: <PrivateRoute><Mylist></Mylist></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/user',
+        element: <Users></Users>,
       },
       {
         path: '/singleequipment/:id',
