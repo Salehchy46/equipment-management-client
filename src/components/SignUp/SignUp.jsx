@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import axios from "axios";
 
 
 const SignUp = () => {
@@ -20,7 +21,7 @@ const SignUp = () => {
         const password = form.password.value;
         const image = form.imgurl.value;
 
-        // const user = { email, password };
+        const user = { email, password };
         // ;
         setSuccess('');
         setRegError('');
@@ -45,19 +46,25 @@ const SignUp = () => {
                 const createdAt = result?.user?.metadata?.creationTime;
                 const newUser = { name, email, createdAt, image };
 
-                fetch('equipment-management-server.vercel.app/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(newUser)
-                })
-                .then(res => res.json())
+                axios.post('http://localhost:5000/users', user)
                 .then(data => {
-                    if(data.insertedId){
-                        console.log('User Created at db');
-                    }
+                    console.log(data.data);
+                    
                 })
+
+                // fetch('equipment-management-server.vercel.app/users', {
+                //     method: 'POST',
+                //     headers: {
+                //         'content-type': 'application/json'
+                //     },
+                //     body: JSON.stringify(newUser)
+                // })
+                // .then(res => res.json())
+                // .then(data => {
+                //     if(data.insertedId){
+                //         console.log('User Created at db');
+                //     }
+                // })
 
                 setSuccess('User Created Successfully')
 
@@ -75,7 +82,6 @@ const SignUp = () => {
             })
             .catch(error => {
                 console.error(error);
-                console.log(password)
                 setRegError(error.message)
                 if (error) {
                     Swal.fire({
