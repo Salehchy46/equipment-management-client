@@ -14,7 +14,7 @@ const Home = () => {
     const { user } = useContext(AuthContext);
 
     const loadedUser = useLoaderData();
-    // console.log(loadedUser);
+    console.log(loadedUser);
 
     return (
         <div className="m-4">
