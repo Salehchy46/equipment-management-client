@@ -16,14 +16,17 @@ const Home = () => {
     const loadedUser = useLoaderData();
     console.log(loadedUser);
 
+    console.log(user);
+    
+
     return (
         <div className="m-4">
             {
                 user ?
                     <div className="text-center flex justify-between flex-row-reverse items-center mb-5 p-4 shadow-sm">
-                        <img src={loadedUser.image} className="rounded-full w-10 h-10" alt="User" />
-                        <p className="my-2 font-medium">{loadedUser.email}</p>
-                        <p className="my-2">Hi {loadedUser.name}</p>
+                        <img src={user?.photoURL || loadedUser.image} className="rounded-full w-10 h-10" alt="User" />
+                        <p className="my-2 font-medium">{user.email || loadedUser.email}</p>
+                        <p className="my-2">Hi {user.displayName || loadedUser.name}</p>
                     </div>
                     :
                     <div>
