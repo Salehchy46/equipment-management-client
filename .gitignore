@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # others
-firebase.config.js
-.env
+.env.local
+
+.vercel

@@ -46,25 +46,25 @@ const SignUp = () => {
                 const createdAt = result?.user?.metadata?.creationTime;
                 const newUser = { name, email, createdAt, image };
 
-                axios.post('http://localhost:5000/users', user)
-                .then(data => {
-                    console.log(data.data);
-                    
-                })
-
-                // fetch('equipment-management-server.vercel.app/users', {
-                //     method: 'POST',
-                //     headers: {
-                //         'content-type': 'application/json'
-                //     },
-                //     body: JSON.stringify(newUser)
-                // })
-                // .then(res => res.json())
+                // axios.post('https://equipment-management-server.vercel.app/users', user)
                 // .then(data => {
-                //     if(data.insertedId){
-                //         console.log('User Created at db');
-                //     }
+                //     console.log(data.data);
+                    
                 // })
+
+                fetch('equipment-management-server.vercel.app/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(newUser)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.insertedId){
+                        console.log('User Created at db');
+                    }
+                })
 
                 setSuccess('User Created Successfully')
 

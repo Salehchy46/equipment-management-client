@@ -7,7 +7,7 @@ const Users = () => {
     const { isPending, isError, error, data: users } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users');
+            const res = await fetch('https://equipment-management-server.vercel.app/users');
             return res.json();
         }
     })
